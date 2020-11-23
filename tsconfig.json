@@ -1,0 +1,25 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "outDir": "./built",
+        "allowJs": true,
+        "target": "es5",
+        "jsx": "react",
+        "moduleResolution": "node",
+        "allowUnreachableCode": false,
+        "noImplicitReturns": true,
+        "noImplicitAny": true,
+        "typeRoots": [ "./typings" ],
+        "outFile": "./built/combined.js",
+        "module": "system",
+        "types": ["node"]
+    },
+    "include": [
+        "./**/*"
+    ],
+    "exclude": [
+        "./plugins/**/*",
+        "./typings/**/*",
+        "./built/**/*"
+    ]
+}
