@@ -2,29 +2,37 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import Slider from "./view/Slider";
 import './main.css';
-const data = require('./model/MockingData');
+import QuoteView from "./view/QuoteView";
+import ImageBGView from './view/ImageBGView';
+
+const dataList = require('./model/MockingData') as Data[];
 
 class ShowCase extends React.Component {
   render() {
     return (
       <div>
-        {data.map((item: Data, index: Number) => {
-          if (index === 1) {
+        <h2>{dataList[0].title}</h2>
+        <Slider 
+          dataList={dataList[0].items} 
+          visibleNum={1} 
+          renderItem={(item: BackgroundImage) => {
             return (
-              <div key={`${index}`}>
-                  <h2>{item.title}</h2>
-                  <Slider data={item.items} visibleNum={3} />
-              </div>
+              <ImageBGView data={item}/>
             )
-          } else {
-            return (
-              <div key={`${index}`}>
-                  <h2>{item.title}</h2>
-                  <Slider data={item.items} />
-              </div>
-            )
-          }
-         })}
+          }}
+        />
+        <h2>{dataList[1].title}</h2>
+        <div className="quote">
+          <Slider 
+            dataList={dataList[1].items} 
+            visibleNum={2} 
+            renderItem={(item: Quote) => {
+              return (
+                <QuoteView data={item}/>
+              )
+            }}
+          />
+        </div>
       </div>
     );
   }

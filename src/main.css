@@ -1,9 +1,13 @@
 .carousel {
+    padding: 15px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.quote {
     max-width: 800px;
     margin: auto;
-    padding: 15px;
     text-align: center;
-    position: relative;
 }
 .scroller {
     overflow-x: hidden;
@@ -11,18 +15,13 @@
 }
 .item {
     min-width: 100%;
-    scroll-snap-align: center;
     background-color: white;
     margin-bottom: 10px;
 }
 .item img {
-    margin: 15px auto -60px;
-    width: 120px;
-    height: 120px;
-    border: solid 4px #ffffff;
-    border-radius: 60px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    z-index: 2;
+    width: fit-content;
+    height: 400pt;
+    pointer-events: none;
 }
 .item:hover {
     cursor: pointer;
@@ -37,6 +36,7 @@
 .card p {
     font-style: italic;
     line-height: 1.6;
+    font-size: x-large;
 }
 .card span {
     display: block;
@@ -44,16 +44,18 @@
     color: teal;
     font-weight: bold;
     text-transform: uppercase;
+    font-size: x-large;
 }
 .carousel .btn {
     position: absolute;
-    top: 50%;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
+    top: 45%;
+    height: 4vh;
+    width: 4vh;
+    border-radius: 4vh;
+    font-size: 2vh;
     background-color: rgba(95, 106, 117, 0.3);
     z-index: 1;
-    line-height: 30px;
+    line-height: 4vh;
     text-align: center;
     color: white;
     font-weight: bold;
@@ -75,10 +77,10 @@
     justify-content: center;
 }
 .pageBtn {
-    margin: 10px;
-    width: 10px;
-    height: 10px;
+    margin: 10pt;
+    width: 1.5vh;
+    height: 1.5vh;
     background-color: teal;
-    border-radius: 100px;
+    border-radius: 1.5vh;
     border: 0px
 }

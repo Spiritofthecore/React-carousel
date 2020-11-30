@@ -25,13 +25,22 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif|svg)$/i, 
         use: "file-loader?name=/public/icons/[name].[ext]"
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       }
     ]
+  },
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js' ],
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
     })
-  ]
+  ],
+  entry: './src/index.tsx',
 };

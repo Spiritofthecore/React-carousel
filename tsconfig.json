@@ -1,25 +1,23 @@
 {
     "compileOnSave": true,
     "compilerOptions": {
-        "outDir": "./built",
+        "outDir": "./dist/",
         "allowJs": true,
-        "target": "es5",
+        "target": "ES5",
         "jsx": "react",
-        "moduleResolution": "node",
         "allowUnreachableCode": false,
         "noImplicitReturns": true,
         "noImplicitAny": true,
         "typeRoots": [ "./typings" ],
-        "outFile": "./built/combined.js",
-        "module": "system",
-        "types": ["node"]
+        "types": ["node"],
+        "module": "ES6",
+        "skipLibCheck": true
     },
     "include": [
         "./**/*"
     ],
     "exclude": [
-        "./plugins/**/*",
-        "./typings/**/*",
-        "./built/**/*"
+        "node_modules",
+        "webpack.config.js"
     ]
 }
