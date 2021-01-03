@@ -18,7 +18,7 @@
 - Swipe 
 - Click arrow buttons 
 - Click paging buttons
-[![Watch the video](https://imgur.com/toadGEa)](https://youtu.be/_M0FFK09vxw)
+[![Watch the video](https://i.imgur.com/toadGEa.png)](https://youtu.be/_M0FFK09vxw)
 
 # How to use: 
 - Copy Slider.tsx to your project and use as a component
